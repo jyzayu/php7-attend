@@ -28,6 +28,8 @@ if(!empty($action))
               
             }
           }
+                  ob_clean(); // Clears any previous output
+          header('Content-Type: application/json');
           //send response
           echo json_encode($rv);
     }
