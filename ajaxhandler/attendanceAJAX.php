@@ -5,6 +5,9 @@ require_once $path."/attendanceapp/database/sessionDetails.php";
 require_once $path."/attendanceapp/database/facultyDetails.php";
 require_once $path."/attendanceapp/database/courseRegistrationDetails.php";
 require_once $path."/attendanceapp/database/attendanceDetails.php";
+
+          ob_clean(); // Clears any previous output
+          header('Content-Type: application/json');
 function createCSVReport($list,$filename)
 {
     $error=0;
